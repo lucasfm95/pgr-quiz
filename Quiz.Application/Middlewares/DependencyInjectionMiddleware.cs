@@ -27,6 +27,7 @@ namespace Quiz.Application.Middlewares
 
             #region Repositories
             services.AddSingleton<ICustomerRepository, CustomerRepository>();
+            services.AddSingleton<IQuestionRepository, QuestionRepository>();
             #endregion
 
             #region Business
@@ -35,6 +36,7 @@ namespace Quiz.Application.Middlewares
 
             #region Services
             services.AddTransient<ICustomerServices, CustomerServices>();
+            services.AddTransient<IQuestionServices, QuestionServices>();
             #endregion
         }
     }
