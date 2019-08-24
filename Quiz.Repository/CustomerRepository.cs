@@ -6,7 +6,7 @@ using Quiz.Repository.Interfaces;
 
 namespace Quiz.Repository
 {
-    public class CustomerRepository : Repository<Customers>, ICustomerRepository
+    public class CustomerRepository : Repository<Customer>, ICustomerRepository
     {
         public CustomerRepository(IConfiguration config, ILogger logger) : base(config, logger)
         {

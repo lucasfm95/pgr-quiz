@@ -5,8 +5,11 @@ using System.Text;
 
 namespace Quiz.Services.Interfaces
 {
-    public interface ICustomerServices
+    public interface IQuestionServices
     {
-        Customer Insert(Customer customer);
+
+        List<Question> GetAll();
+
+        Question GetById(int id);
     }
 }

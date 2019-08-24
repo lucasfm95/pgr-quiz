@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Quiz.Domain
 {
     [Table("Customer")]
-    public class Customers : Entity
+    public class Customer : Entity
     {
 
         public string Name { get; set; }

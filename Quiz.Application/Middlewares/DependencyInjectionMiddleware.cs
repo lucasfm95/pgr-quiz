@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Quiz.Business;
 using Quiz.Business.Interfaces;
 
+
 namespace Quiz.Application.Middlewares
 {
 
@@ -30,15 +31,19 @@ namespace Quiz.Application.Middlewares
             #region Repositories
             services.AddSingleton<ICustomerRepository, CustomerRepository>();
             services.AddSingleton<IScoreRepository, ScoreRepository>();
+            services.AddSingleton<IQuestionRepository, QuestionRepository>();
             #endregion
 
             #region Business
             services.AddTransient<IScoreBusiness, ScoreBusiness>();
+            services.AddTransient<IAnswerBusiness, AnswerBusiness>();
             #endregion
 
             #region Services
             services.AddTransient<ICustomerServices, CustomerServices>();
             services.AddTransient<IScoreServices, ScoreServices>();
+            services.AddTransient<IQuestionServices, QuestionServices>();
+            services.AddTransient<IAnswerServices, AnswerServices>( );
             #endregion
         }
     }

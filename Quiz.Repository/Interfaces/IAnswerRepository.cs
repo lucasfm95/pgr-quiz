@@ -1,11 +1,11 @@
-﻿using Quiz.Domain;
+﻿using Quiz.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Quiz.Repository.Interfaces
 {
-    public interface ICustomerRepository : IRepository<Customer>
+    public interface IAnswerRepository : IRepository<Answer>
     {
     }
 }
