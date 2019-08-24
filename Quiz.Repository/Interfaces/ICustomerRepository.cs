@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Quiz.Repository.Interfaces
 {
-    public interface ICustomerRepository : IRepository<Customer>
+    public interface ICustomerRepository : IRepository<Customers>
     {
     }
 }

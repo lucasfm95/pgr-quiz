@@ -10,6 +10,6 @@ namespace Quiz.Repository.Interfaces
         T Insert(T obj);
         List<T> GetAll();
         T GetById(int id);
-        List<T> BulkInsert(List<T> list);
+
     }
 }

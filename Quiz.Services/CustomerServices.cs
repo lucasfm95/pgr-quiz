@@ -12,7 +12,7 @@ namespace Quiz.Services
         {
             _customerRepository = customerRepository;
         }
-        public Customer Insert(Customer customer)
+        public Customers Insert(Customers customer)
         {
             return _customerRepository.Insert(customer);
         }
