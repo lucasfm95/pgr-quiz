@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Quiz.Business;
+using Quiz.Business.Interfaces;
 using Quiz.Repository;
 using Quiz.Repository.Interfaces;
 using Quiz.Services;
@@ -31,12 +33,13 @@ namespace Quiz.Application.Middlewares
             #endregion
 
             #region Business
-
+            services.AddTransient<IAnswerBusiness, AnswerBusiness>( );
             #endregion
 
             #region Services
             services.AddTransient<ICustomerServices, CustomerServices>();
             services.AddTransient<IQuestionServices, QuestionServices>();
+            services.AddTransient<IAnswerServices, AnswerServices>( );
             #endregion
         }
     }
