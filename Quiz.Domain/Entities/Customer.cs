@@ -8,7 +8,7 @@ namespace Quiz.Domain
 
         public string Name { get; set; }
 
-        public DateTime Birthday { get; set; }
+        public DateTime BirthDate { get; set; }
 
         public string SchollarShip { get; set; }
     }

@@ -23,7 +23,15 @@ namespace Quiz.Repository
         
         public virtual T Insert(T obj)
         {
-            return Conn.Insert(obj);
+            try
+            {
+                 Conn.Insert(obj);
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            return obj;
         }
 
         public virtual List<T> GetAll()
