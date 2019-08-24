@@ -34,8 +34,7 @@ namespace Quiz.Application.Middlewares
             #endregion
 
             #region Services
-
-            services.AddSingleton<ICustomerServices, CustomerServices>();
+            services.AddTransient<ICustomerServices, CustomerServices>();
             #endregion
         }
     }
