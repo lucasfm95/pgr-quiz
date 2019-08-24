@@ -23,8 +23,7 @@ namespace Quiz.Repository
         
         public virtual T Insert(T obj)
         {
-            Conn.Insert(obj);
-            return obj;
+            return Conn.Insert(obj);
         }
 
         public virtual List<T> GetAll()
