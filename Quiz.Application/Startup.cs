@@ -13,6 +13,7 @@ using Quiz.Repository;
 using Quiz.Repository.Interfaces;
 using Quiz.Services;
 using Quiz.Services.Interfaces;
+using Quiz.Application.Middlewares;
 
 namespace Quiz.Application
 {
@@ -24,8 +25,6 @@ namespace Quiz.Application
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices( IServiceCollection services )
         {
             services.AddMvc( ).SetCompatibilityVersion( CompatibilityVersion.Version_2_2 );
@@ -34,11 +33,15 @@ namespace Quiz.Application
 
         private void DependencyInjections(IServiceCollection services)
         {
-            services.AddSingleton<ICustomerRepository, CustomerRepository>();
-            services.AddSingleton<ICustomerServices, CustomerServices>();
+
+            services.BuildServiceProvider( );
+
+            // Adiciona os middlewares
+            services.AddDependencyInjection( );
+            services.AddLoggerMiddleware( Configuration );
+            services.AddSwaggerMiddleware( );
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure( IApplicationBuilder app, IHostingEnvironment env )
         {
             if ( env.IsDevelopment( ) )
@@ -47,6 +50,7 @@ namespace Quiz.Application
             }
 
             app.UseMvc( );
+            app.UseSwaggerMiddleware( );
         }
     }
 }
