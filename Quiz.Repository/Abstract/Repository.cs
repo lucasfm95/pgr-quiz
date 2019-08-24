@@ -1,6 +1,6 @@
 ﻿using Dapper.Contrib.Extensions;
 using Microsoft.Extensions.Configuration;
-using Quiz.Domain.Entities;
+using Quiz.Domain.Entities.Abstract;
 using Quiz.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace Quiz.Repository
+namespace Quiz.Repository.Abstract
 {
     public class Repository<T> : IRepository<T> where T : Entity
     {
