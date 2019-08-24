@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
+using Quiz.Business;
+using Quiz.Business.Interfaces;
 
 namespace Quiz.Application.Middlewares
 {
@@ -27,14 +29,16 @@ namespace Quiz.Application.Middlewares
 
             #region Repositories
             services.AddSingleton<ICustomerRepository, CustomerRepository>();
+            services.AddSingleton<IScoreRepository, ScoreRepository>();
             #endregion
 
             #region Business
-
+            services.AddTransient<IScoreBusiness, ScoreBusiness>();
             #endregion
 
             #region Services
             services.AddTransient<ICustomerServices, CustomerServices>();
+            services.AddTransient<IScoreServices, ScoreServices>();
             #endregion
         }
     }

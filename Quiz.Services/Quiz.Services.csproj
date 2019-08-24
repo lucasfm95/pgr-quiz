@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Quiz.Business\Quiz.Business.csproj" />
     <ProjectReference Include="..\Quiz.Domain\Quiz.Domain.csproj" />
     <ProjectReference Include="..\Quiz.Repository\Quiz.Repository.csproj" />
   </ItemGroup>
