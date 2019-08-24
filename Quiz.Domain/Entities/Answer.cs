@@ -7,5 +7,6 @@ namespace Quiz.Domain.Entities
 {
     public class Answer : Entity
     {
+        public string Description { get; set; }
     }
 }
