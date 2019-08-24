@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Quiz.Application</name>
+    </assembly>
+    <members>
+        <member name="T:Quiz.Application.Middlewares.DependencyInjectionMiddleware">
+            <summary>
+            Classe de injeção de dependência no container DI
+            </summary>
+        </member>
+        <member name="M:Quiz.Application.Middlewares.DependencyInjectionMiddleware.AddDependencyInjection(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adiciona todas as dependências do projeto no container de DI
+            </summary>
+            <param name="services">Container Services</param>
+        </member>
+    </members>
+</doc>
