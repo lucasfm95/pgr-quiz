@@ -8,9 +8,9 @@ using System.Text;
 
 namespace Quiz.Repository
 {
-    public class CustomerRepository : Repository<Customer>, ICustomerRepository
+    public class QuestionRepository : Repository<Question> , IQuestionRepository
     {
-        public CustomerRepository(IConfiguration config) : base(config)
+        public QuestionRepository(IConfiguration config) : base(config)
         {
         }
     }

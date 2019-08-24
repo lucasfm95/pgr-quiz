@@ -36,12 +36,30 @@ namespace Quiz.Repository.Abstract
 
         public virtual List<T> GetAll()
         {
-            return Conn.GetAll<T>().ToList();
+            List<T> list = new List<T>();
+            try
+            {
+                list = Conn.GetAll<T>().ToList();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return list;
         }
 
         public virtual T GetById(int id)
         {
-            return Conn.Get<T>(id);
+            T question = null;
+            try
+            {
+               question = Conn.Get<T>(id);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return question;
         }
     }
 }
