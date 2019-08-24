@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Quiz.Domain;
+using Quiz.Repository.Abstract;
 using Quiz.Repository.Interfaces;
 using System;
 using System.Collections.Generic;

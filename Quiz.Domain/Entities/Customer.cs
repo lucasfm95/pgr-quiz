@@ -1,4 +1,4 @@
-﻿using Quiz.Domain.Entities;
+﻿using Quiz.Domain.Entities.Abstract;
 using System;
 
 namespace Quiz.Domain
