@@ -14,7 +14,7 @@ namespace Quiz.Repository.Abstract
     public class Repository<T> : IRepository<T> where T : Entity
     {
         private readonly IConfiguration _config;
-        private dynamic Conn => new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+        protected IDbConnection Conn => new SqlConnection(_config.GetConnectionString("DefaultConnection"));
 
         public Repository(IConfiguration config)
         {
@@ -25,7 +25,7 @@ namespace Quiz.Repository.Abstract
         {
             try
             {
-                 Conn.Insert(obj);
+                Conn.Insert(obj);
             }
             catch (Exception ex)
             {
@@ -42,11 +42,6 @@ namespace Quiz.Repository.Abstract
         public virtual T GetById(int id)
         {
             return Conn.Get<T>(id);
-        }
-
-        public List<T> BulkInsert(List<T> list)
-        {
-            return Conn.BulkInsert(list);
         }
     }
 }

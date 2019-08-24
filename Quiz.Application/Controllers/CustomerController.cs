@@ -20,7 +20,7 @@ namespace Quiz.Application.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Customer> Post(Customer customer)
+        public ActionResult<Customers> Post(Customers customer)
         {
             return _clientservices.Insert(customer);
         }

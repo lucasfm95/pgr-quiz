@@ -7,6 +7,6 @@ namespace Quiz.Services.Interfaces
 {
     public interface ICustomerServices
     {
-        Customer Insert(Customer customer);
+        Customers Insert(Customers customer);
     }
 }

@@ -1,9 +1,11 @@
 ﻿using Quiz.Domain.Entities.Abstract;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Quiz.Domain
 {
-    public class Customer : Entity
+    [Table("Customer")]
+    public class Customers : Entity
     {
 
         public string Name { get; set; }
